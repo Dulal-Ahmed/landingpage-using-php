@@ -85,6 +85,21 @@
                 <div class="left-block">
 
                <form method="POST" action="add.php" enctype="multipart/form-data">  
+               <div class="top">
+                        <div>
+                            <input type="checkbox" id="check">&nbsp;
+                            <label for="check">Tout sélectionner</label>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <!--  Add button  -->
+                            <button type="button" class="btn add-btn addBox" onclick="addBoxes()"><img src="images/add.png" alt="">&nbsp;&nbsp;&nbsp;<input type="submit" name="save" value="Ajouter un produit" style="outline: none; border: none; background: transparent; color: white;"></button>&nbsp;
+                          
+                            <img id="selectbincolor"  src="./images/bin.png" alt="deletebin"  style="width: 28px; height: 28px; cursor: pointer;" type="submit" name="delete" onclick=" deleteDta();"> 
+                            <img id="selectbincolor2" src="images/bag.png" alt="bin" style="width: 20px; height: 20px;">
+                      
+                                                       
+                        </div>
+                    </div>
                     <!--top input  Box -->
                     <div class="box">
                    
@@ -129,21 +144,7 @@
                   
                     </div>
 
-                    <div class="top">
-                        <div>
-                            <input type="checkbox" id="check">&nbsp;
-                            <label for="check">Tout sélectionner</label>
-                        </div>
-                        <div style="display: flex; align-items: center;">
-                            <!--  Add button  -->
-                            <button type="button" class="btn add-btn addBox" onclick="addBoxes()"><img src="images/add.png" alt="">&nbsp;&nbsp;&nbsp;<input type="submit" name="save" value="Ajouter un produit" style="outline: none; border: none; background: transparent; color: white;"></button>&nbsp;
-                          
-                            <img id="selectbincolor"  src="./images/bin.png" alt="deletebin"  style="width: 28px; height: 28px; cursor: pointer;" type="submit" name="delete" onclick=" deleteDta();"> 
-                            <img id="selectbincolor2" src="images/bag.png" alt="bin" style="width: 20px; height: 20px;">
-                      
-                                                       
-                        </div>
-                    </div>
+                    
                 </form>
 
                 <form id="sumitdata"   action="remove.php" method="post">
