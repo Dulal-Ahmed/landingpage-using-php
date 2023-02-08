@@ -89,13 +89,12 @@
                     <div class="box">
                    
                         <div class="image">
-                           <input type="checkbox" class="check-2">
+                          
                             <div class="img-box imageparentDiv">
-                               
-                              
-                                <!--  Image upload -->
-                                <input type="file" name="image" required="required" />
-				
+                            <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile123(event)" style="display: none;"></p>
+                              <label for="file" style="cursor: pointer; width:100%; height:100%;" ></label>
+                           <p><img id="output" width="200" /></p>   
+                
                             </div>
                         </div>
                         <div class="description">
@@ -138,14 +137,18 @@
                         <div style="display: flex; align-items: center;">
                             <!--  Add button  -->
                             <button type="button" class="btn add-btn addBox" onclick="addBoxes()"><img src="images/add.png" alt="">&nbsp;&nbsp;&nbsp;<input type="submit" name="save" value="Ajouter un produit" style="outline: none; border: none; background: transparent; color: white;"></button>&nbsp;
-                            
-                            <img id="selectbincolor" src="./images/bin.png" alt="deletebin"  style="width: 28px; height: 28px; cursor: pointer;" onclick="deleteProduct()"> 
+                          
+                            <img id="selectbincolor"  src="./images/bin.png" alt="deletebin"  style="width: 28px; height: 28px; cursor: pointer;" type="submit" name="delete" onclick=" deleteDta();"> 
                             <img id="selectbincolor2" src="images/bag.png" alt="bin" style="width: 20px; height: 20px;">
                       
                                                        
                         </div>
                     </div>
                 </form>
+
+                <form id="sumitdata"   action="remove.php" method="post">
+            
+             
          <?php
                 //include our connection
                 include 'dbconfig.php';
@@ -159,10 +162,10 @@
                   
                     <div class='box'>
                         <div class='image'>
-                           <input type='checkbox' class='check-2'>
+                           <input type='checkbox' name='chk[]' value='".$row['rowid']."' class='check-2'>
                            <a href='imgupdate.php?id=".$row['rowid']."'>
                             <div class='img-box imageparentDiv'>
-                                <img class='imageLinkupdate' src='".$row['location']."' alt='productimage'>
+                                <img class='imageLinkupdate' src='".$row['location']."' alt='productimage' >
                             </div>
                             </a>
                         </div>
@@ -173,7 +176,6 @@
                                 </div>
                                 <div>
                                  <a href='edit.php?id=".$row['rowid']."'>Edit</a>
-                                 <a href='remove.php?id=".$row['rowid']."'>Delete</a>
                                 </div>
                             </div>
 
@@ -199,7 +201,8 @@
                 }
             ?>
              <!-- Box 1 End -->
-
+            
+             </form>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
@@ -278,7 +281,12 @@
 
     </div>
 </main>
-
+<script>
+var loadFile123 = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
 
   <script src="./script.js"></script>
 </body>

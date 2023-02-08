@@ -7,7 +7,7 @@ let detectevent = ()=>{
     const check = document.querySelector('#check');
     let check2 = document.querySelectorAll('.check-2');
     let imageparentDiv = document.querySelectorAll('.imageparentDiv');
-   let editimagebox = document.querySelector('#editimagebox'); 
+    let editimagebox = document.querySelector('#editimagebox'); 
    
    let imageLinkupdate = document.querySelectorAll('.imageLinkupdate');
  
@@ -56,4 +56,9 @@ let deleteProduct =()=>{
 //   for image change 
 let closeimageeditDiv = ()=>{
     editimagebox.style.display = "none";
+}
+
+let deleteDta = ()=>{
+   let sumitdata = document.querySelector('#sumitdata').submit();
+  
 }
