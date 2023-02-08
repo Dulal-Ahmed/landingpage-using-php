@@ -97,38 +97,38 @@
                     <!--top input  Box -->
                     <div class="box">
                    
-                        <div class="description">
-                            <div class="d-1">
-                                <div>
+                        <div class="description " >
+                            <div class="d-1" style="margin-top:20px;">
+                                <div style="margin-top:10px;">
                                     <!--  Prodduct link  -->
                                     <label for="productlink">productlink</label>
-                                   <input type="text" id="productlink" name="productlink" value="<?php echo $row['productlink']; ?>" style="border-radius: 8px;">
+                                   <input type="text" id="productlink" name="productlink" value="<?php echo $row['productlink']; ?>" style="border:1px solid gray;  border-radius: 8px; padding:2px 8px; ">
                                 </div>
                                 <div>
                                     <!-- <a href="">Edit</a> -->
                             </div>
                             <div class="d-1">
-                                <div>
+                                <div style="margin-left:10px; margin-top:10px; " >
                                     <!--  Prodduct link  -->
                                     <label for="productname">productname</label><br>
-                                 <input type="text" id="productname" name="productname" value="<?php echo $row['productname']; ?>" style=" border-radius: 8px;" >
+                                 <input type="text" id="productname" name="productname" value="<?php echo $row['productname']; ?>" style="border:1px solid gray;  border-radius: 8px; padding:2px 8px; " >
                              </div>
                                 <div>
                                     <!-- <a href="">Edit</a> -->
                             </div>
                           
                             <div class="points">
-                                <div>
-                                    <p class="pp-1">Quantité <br><input type="number" name="quantite" value="<?php echo $row['quantite']; ?>" style="width: 80px; border-radius: 8px;"></p>
+                                <div >
+                                    <p class="pp-1">Quantité <br><input type="number" name="quantite" value="<?php echo $row['quantite']; ?>" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
                                 </div>
-                                <div>
-                                    <p class="pp-1">Prix <br> <input type="number" name="price" value="<?php echo $row['price']; ?>" style="width: 80px; border-radius: 8px;"></p>
+                                <div style="margin-left:10px;">
+                                    <p class="pp-1">Prix <br> <input type="number" name="price" value="<?php echo $row['price']; ?>" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
                                 </div>
-                                <div>
-                                    <p class="pp-1">Size <br><input type="text" name="size" value="<?php echo $row['size']; ?>" style="width: 80px; border-radius: 8px;"></p>
+                                <div style="margin-left:10px;">
+                                    <p class="pp-1">Size <br><input type="text" name="size" value="<?php echo $row['size']; ?>" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
                                 </div>
-                                <div>
-                                    <p class="pp-1">Color <br> <input type="text" name="color" value="<?php echo $row['color']; ?>" style="width: 80px; border-radius: 8px;"></p>
+                                <div style="margin-left:10px;">
+                                    <p class="pp-1">Color <br> <input type="text" name="color" value="<?php echo $row['color']; ?>" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
                                 </div>
                             </div>
                         </div>

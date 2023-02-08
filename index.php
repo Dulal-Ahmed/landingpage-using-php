@@ -107,8 +107,8 @@
                           
                             <div class="img-box imageparentDiv">
                             <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile123(event)" style="display: none;"></p>
-                              <label for="file" style="cursor: pointer; width:100%; height:100%;" ></label>
-                           <p><img id="output" width="200" /></p>   
+                              <label for="file" style="cursor: pointer; width:100%; height:100%;  " ></label>
+                           <p style="width:20px; height:20px; position:absolute; "><img src="./images/img-icon.png" id="output" style="width:100%;" /></p>   
                 
                             </div>
                         </div>
@@ -116,27 +116,27 @@
                             <div class="d-1">
                                 <div>
                                     <!--  Prodduct link  -->
-                                   <input type="text" name="productlink" placeholder="Product Link" style="border:1px solid gray; border-radius: 8px;">
+                                   <input type="text" name="productlink" placeholder="Product Link" style="border:1px solid gray; border-radius: 8px; padding:2px 8px;">
                                 </div>
                                 <div>
                                     <!-- <a href="">Edit</a> -->
                                 </div>
                             </div>
 
-                            <h5><input type="text" name="productname" placeholder=" Product Name" style="border:1px solid gray; margin-top: 10px; border-radius: 8px;" ></h5>
+                            <h5><input type="text" name="productname" placeholder=" Product Name" style="border:1px solid gray; margin-top: 10px; border-radius: 8px; padding:2px 8px;" ></h5>
 
                             <div class="points">
                                 <div>
-                                    <p class="pp-1">Quantité <br><input type="number" name="quantite" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px;"></p>
+                                    <p class="pp-1">Quantité <br><input type="number" name="quantite" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
                                 </div>
                                 <div>
-                                    <p class="pp-1">Prix <br> <input type="number" name="price" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px;"></p>
+                                    <p class="pp-1">Prix <br> <input type="number" name="price" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
                                 </div>
                                 <div>
-                                    <p class="pp-1">Size <br><input type="text" name="size" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px;"></p>
+                                    <p class="pp-1">Size <br><input type="text" name="size" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
                                 </div>
                                 <div>
-                                    <p class="pp-1">Color <br> <input type="text" name="color" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px;"></p>
+                                    <p class="pp-1">Color <br> <input type="text" name="color" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
                                 </div>
                             </div>
                         </div>
