@@ -172,7 +172,7 @@
                         <div class='description'>
                             <div class='d-1'>
                                 <div>
-                                    <img src='".$row['productlink']."' alt='dfgdfg'>
+                                    <img src='".$row['productlink']."' alt='dfgdfg' style='width: 15%;'>
                                 </div>
                                 <div>
                                  <a href='edit.php?id=".$row['rowid']."'>Edit</a>
