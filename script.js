@@ -62,3 +62,9 @@ let deleteDta = ()=>{
    let sumitdata = document.querySelector('#sumitdata').submit();
   
 }
+
+let clickopen = document.querySelector('#clickopen');
+
+let clickshowform =()=>{
+    clickopen.style.display = " flex";
+}

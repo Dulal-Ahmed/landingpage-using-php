@@ -85,7 +85,7 @@
                 <div class="left-block">
 
                <form method="POST" action="add.php" enctype="multipart/form-data">  
-               <div class="top">
+               <div class="top" onclick="clickshowform()">
                         <div>
                             <input type="checkbox" id="check">&nbsp;
                             <label for="check">Tout sélectionner</label>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                     <!--top input  Box -->
-                    <div class="box">
+                    <div id="clickopen"  class="box" style="display:none;" >
                    
                         <div class="image">
                           
@@ -116,27 +116,27 @@
                             <div class="d-1">
                                 <div>
                                     <!--  Prodduct link  -->
-                                   <input type="text" name="productlink" placeholder="Product Link" style="border:1px solid gray; border-radius: 8px; padding:2px 8px;">
+                                   <input type="text" name="productlink" placeholder="Product Link" style="border:1px solid gray; border-radius: 20px; padding:2px 8px; font-weight: 500;" required>
                                 </div>
                                 <div>
                                     <!-- <a href="">Edit</a> -->
                                 </div>
                             </div>
 
-                            <h5><input type="text" name="productname" placeholder=" Product Name" style="border:1px solid gray; margin-top: 10px; border-radius: 8px; padding:2px 8px;" ></h5>
+                            <h5><input type="text" name="productname" placeholder=" Product Name" style="border:1px solid gray; margin-top: 10px; border-radius: 20px; padding:2px 8px; font-weight: 500;" required></h5>
 
                             <div class="points">
                                 <div>
-                                    <p class="pp-1">Quantité <br><input type="number" name="quantite" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
+                                    <p class="pp-1">Quantité <br><input type="number" name="quantite" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 20px; padding:2px 8px;" required></p>
                                 </div>
                                 <div>
-                                    <p class="pp-1">Prix <br> <input type="number" name="price" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
+                                    <p class="pp-1">Prix <br> <input type="number" name="price" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 20px; padding:2px 8px;"></p>
                                 </div>
                                 <div>
-                                    <p class="pp-1">Size <br><input type="text" name="size" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
+                                    <p class="pp-1">Size <br><input type="text" name="size" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 20px; padding:2px 8px;"></p>
                                 </div>
                                 <div>
-                                    <p class="pp-1">Color <br> <input type="text" name="color" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 8px; padding:2px 8px;"></p>
+                                    <p class="pp-1">Color <br> <input type="text" name="color" placeholder="-" style="border:1px solid gray; width: 80px; border-radius: 20px; padding:2px 8px;"></p>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,8 @@
 
                 <form id="sumitdata"   action="remove.php" method="post">
             
-             
+                <div style=" display: flex;
+    flex-direction: column-reverse;">
          <?php
                 //include our connection
                 include 'dbconfig.php';
@@ -157,7 +158,7 @@
                 //query from the table that we create
                 $sql = "SELECT rowid, * FROM products";
                 $query = $db->query($sql);
-     
+      
                 while($row = $query->fetchArray()){
                echo "
                   
@@ -202,7 +203,7 @@
                 }
             ?>
              <!-- Box 1 End -->
-            
+             </div>
              </form>
                 </div>
             </div>
